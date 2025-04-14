@@ -1,0 +1,42 @@
+@use "vars";
+
+@media only screen and (max-width: 959px) {
+    .header__row {
+        top: 0;
+    }
+
+    .section-intro{
+        img{
+            animation:  none;
+        }
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .mobile-nav {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+
+
+    .header__row {
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    .card-product {
+        flex-basis: 100%;
+        &::before{
+            content: " ";
+            position: absolute;
+            display: block !important;
+            background:  rgb(192, 191, 191);
+            width: 100%;
+            height: 0.01rem;
+            bottom: 0;
+        }
+    }
+
+}

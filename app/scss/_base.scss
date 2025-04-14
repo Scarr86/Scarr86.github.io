@@ -1,0 +1,249 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+	height: 100% ;
+
+    overflow-x: hidden;
+    position: relative;
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+body {
+    background-color: var(--page-bg);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    text-wrap: balance;
+    font-weight: 400;
+    font-size: 18px;
+    // line-height: 24px;
+    overflow-x: hidden;
+    position: relative;
+    min-width: 320px;
+}
+.wrapper{
+	position: relative;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+
+    max-width: var(--container-width);
+    width: 100%;
+}
+
+.add-cube::before {
+	content: " ";
+	position: absolute;
+	display: block;
+	background-color: var(--primary);
+	width: 0.5rem;
+	height: 0.8rem;
+	left: 0;
+	top: 50%;
+	transform: translate(0%, -50%);
+}
+
+.add-cube-bottom::before {
+	content: " ";
+	position: absolute;
+	display: block;
+	background-color: var(--primary);
+	width: 0.5rem;
+	height: 0.8rem;
+	bottom: 0;
+	left: 50%;
+}
+
+
+// SECTION INTRO START
+.section-intro {
+	height: 100vh;
+	padding: 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    overflow: hidden;
+
+	img {
+		display: block;
+		height: 100vh;
+		width: 100%;
+
+		object-fit: cover;
+		animation: kenburns-1 30s linear 0.1s infinite alternate;
+	}
+
+	&__filter {
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.3);
+		z-index: 10;
+
+	}
+
+	&__box {
+		position: absolute;
+		z-index: 20;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// margin-top: -100px;
+	}
+
+	h4 {
+		text-align: center;
+		z-index: 100;
+		color: #fff;
+		font-weight: 500;
+		font-size: 22px;
+		margin-bottom: 15px;
+		letter-spacing: 14px;
+		line-height: 40px;
+		text-transform: uppercase;
+	}
+
+	h1 {
+		color: #fff;
+		font-size: 52px;
+		text-align: center;
+		padding: 0 15px;
+
+		span {
+			color: var(--primary);
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+	}
+
+	&__link {
+		text-transform: uppercase;
+		display: block;
+		padding: 7px 15px;
+		position: relative;
+		a {
+			color: #fff;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+	}
+}
+@keyframes kenburns-1 {
+	0% {
+		transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+	}
+
+	100% {
+		transform: scale3d(1.225, 1.225, 1.225) translate3d(-100px, -50px, 0px);
+	}
+}
+
+// SECTION INTRO END
+
+
+// SECTION PRODUCT START
+.products{
+	&__box{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 15px;
+		padding-top: 45px;
+	}
+}
+
+
+.card-product {
+	margin-left: 20px;
+	margin-bottom: 40px;
+	flex-basis: calc(33.3333% - 20px);
+	text-align: center;
+	position: relative;
+	&::before{
+		content: " ";
+		position: absolute;
+		display: block !important;
+		background:  rgb(192, 191, 191);
+		width: 0.01rem;;
+		height: 100%;
+		right: 0;
+	}
+}
+.card-product__img {
+	height: 250px;
+    width: 100%;
+	object-fit: contain;
+	transition: all 0.3s ease-in;
+	&:hover{
+		transform: scale(1.1);
+			
+	}
+}
+.card-product__box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+}
+.card-product__title {
+	font-size: 24px;
+	position: relative;
+	margin-bottom: 15px;
+	a{
+		display: block;
+		height: 52px;
+	}
+	&::after{
+		content: " ";
+		position: absolute;
+		display: block !important;
+		background: #000;
+		width: 2rem;
+		height: 0.01rem;
+		// top: 30%;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+.card-product__text {
+	position: relative;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+.card-product__link {
+	position: relative;
+	a{
+		padding: 15px;
+		text-transform: uppercase;
+		font-weight: bold;
+        font-size: 16px;
+	}
+}
+// SECTION PRODUCT END
+
