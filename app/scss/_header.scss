@@ -186,7 +186,7 @@
 	&__logo-link{
 		padding: 0 30px;
 		img{
-			height: 170px;
+			height: 90px;
 			width: 100%;
 			object-fit: contain;
 		}
@@ -196,8 +196,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 35px;
+		padding: 15px;
+		width: 100%;
 		a{
+			width: 100%;
 			text-align: center;
 		}
 		a:first-child{
@@ -206,12 +208,13 @@
 		}
 
 		img{
+			height: 50px;
 			width: 50%;
 		}
 	}
 
 	&__list{
-		font-size: 24px;
+		font-size: 22px;
 		font-weight:  400;
 	}
 	
