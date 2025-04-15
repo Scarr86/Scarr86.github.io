@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
@@ -72,7 +74,7 @@
         <div class="sidenav__burger burger">
           <div class="burger__line"></div>
         </div>
-        <a class="sidenav__logo-link"href="./">
+        <a class="sidenav__logo-link" href="./">
           <img src="./img/logo.svg" alt="">
         </a>
         <div class="sidenav__cocial">
@@ -141,10 +143,25 @@
 
     <section class="products container">
 
+      <div class="products__filter">
+        <button class="add-cube" type="button"  data-filter="all"> ПОКАЗАТЬ ВСЕ</button>
+        <button class="add-cube" type="button" data-filter="telescope"> ТЕЛЕСКОПЫ</button>
+        <button class="add-cube" type="button" data-filter="accessories"> ПРИНАДЛЕЖНОСТИ</button>
+      </div>
+
+      <div class="products__filter">
+        <div class="select-wrap add-cube">
+          <select class="products__select" name="products-filter">
+            <option value="all"> ПОКАЗАТЬ ВСЕ </option>
+            <option value="telescope"> ТЕЛЕСКОПЫ </option>
+            <option value="accessories"> ПРИНАДЛЕЖНОСТИ </option>
+          </select>
+        </div>
+      </div>
+
       <div class="products__box">
 
-        <div class="card-product">
-
+        <div class="card-product "    data-category="telescope">
           <a href="./">
             <img class="card-product__img" src="./img/rc360_m.jpg">
           </a>
@@ -158,8 +175,7 @@
             </div>
           </div>
         </div>
-        
-        <div class="card-product">
+        <div class="card-product  "  data-category="telescope">
           <a href="./">
             <img class="card-product__img" src="./img/rc360_m.jpg">
           </a>
@@ -173,7 +189,7 @@
             </div>
           </div>
         </div>
-        <div class="card-product">
+        <div class="card-product  "  data-category="accessories">
           <a href="./">
             <img class="card-product__img" src="./img/rc360_m.jpg">
           </a>
@@ -187,7 +203,7 @@
             </div>
           </div>
         </div>
-        <div class="card-product">
+        <div class="card-product  "  data-category="accessories">
           <a href="./">
             <img class="card-product__img" src="./img/rc360_m.jpg">
           </a>
@@ -201,7 +217,7 @@
             </div>
           </div>
         </div>
-        <div class="card-product">
+        <div class="card-product  "  data-category="accessories">
           <a href="./">
             <img class="card-product__img" src="./img/rc360_m.jpg">
           </a>
