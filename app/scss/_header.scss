@@ -2,14 +2,15 @@
 	position: absolute;
 	width: 100%;
 	z-index: 100;
-
+	
 	&__row {
+		padding: 0 15px;
 		height: 60px;
 		background-color: #fff;
 		position: relative;
 		top: 61px;
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
 		align-items: stretch;
 	}
 
@@ -20,6 +21,7 @@
 .logo {
 	display: flex;
 	align-items: center;
+	margin-right: auto;
 
 	img {
 		display: block;
@@ -35,7 +37,10 @@
 .header__nav {}
 
 .nav {
+	width: 100%;
 	font-size: 18px;
+	display: flex;
+	justify-content: center;
 	.active {
 		a {
 			color: var(--primary) !important;
