@@ -35,46 +35,60 @@ $burgerSidenav.addEventListener("click", (ev) => {
 
 // filter products
 $filter = document.querySelectorAll(".products__filter button")
+$filterSelect = document.querySelector(".products__filter select")
 $products = document.querySelectorAll('.card-product')
+
+
 // $products.forEach(p=> p.style.opacity = 1)
-console.log($filter, $products)
+console.log($filter, $products, $filterSelect)
+console.dir($filterSelect)
+
+
+let filterProductsFn = (filter) => {
+    $products.forEach(p => {
+        p.classList.remove("animate__fadeIn")
+        p.style.display = 'none'
+    })
+
+    setTimeout(() => {
+        if (filter == 'all') {
+            $products.forEach(p => {
+                p.classList.add("animate__fadeIn")
+                p.style.display = 'block'
+            })
+        }
+        else {
+            $products.forEach(p => {
+                if (p.dataset.category == filter) {
+                    p.classList.add("animate__fadeIn")
+                    p.style.display = "block";
+                }
+                else {
+                    p.classList.remove("animate__fadeIn")
+                    p.style.display = 'none'
+                }
+            })
+        }
+    }, 200);
+}
 
 $filter.forEach(element => {
     element.addEventListener('click', (ev) => {
         console.log(ev.target.dataset.filter)
         let filter = ev.target.dataset.filter
 
-        $products.forEach(p => {
-            p.classList.remove("animate__fadeIn")
-            p.style.display = 'none'
-        })
-
-        setTimeout(() => {
-            if (filter == 'all') {
-                $products.forEach(p => {
-                    p.classList.add("animate__fadeIn")
-                    p.style.display = 'block'
-                })
-            }
-            else {
-                $products.forEach(p => {
-                    if (p.dataset.category == filter) {
-                        p.classList.add("animate__fadeIn")
-                        p.style.display = "block";
-                    }
-                    else {
-                        p.classList.remove("animate__fadeIn")
-                        p.style.display = 'none'
-                    }
-                })
-            }
-
-
-        }, 200);
-
+        filterProductsFn(filter)
     })
 
 });
+
+let selectItem = () => $filterSelect.options[$filterSelect.selectedIndex]
+filterProductsFn(selectItem().value);
+
+$filterSelect.addEventListener('change', (ev) => {
+    console.dir(selectItem())
+    filterProductsFn(selectItem().value)
+})
 
 
 // filter products

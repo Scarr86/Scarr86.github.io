@@ -1,0 +1,31 @@
+.section-product {
+    margin-top: 140px;
+    padding: 50px 15px;
+
+    // flex-wrap: wrap;
+    img{
+        width: 50%;
+        object-fit: contain;
+        padding: 40px;
+    }
+}
+.section-product__wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-product__description {
+    width: 50%;
+    padding-left: 40px;
+}
+.section-product__title {
+    font-weight: 900;
+}
+.section-product__text {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.section-product__price {
+    color: var(--primary);
+    font-style: italic;
+}
