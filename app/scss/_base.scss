@@ -237,12 +237,12 @@ body {
 		display: block !important;
 		background: rgb(192, 191, 191);
 		width: 0.01rem;
-		;
 		height: 100%;
 		right: 0;
 	}
 
 	&__img {
+		display: block;
 		height: 250px;
 		width: 100%;
 		object-fit: contain;
@@ -296,13 +296,6 @@ body {
 			font-size: 16px;
 		}
 	}
-}
-
-.tmp{
-	height: 100vh;
-}
-.footer{
-	height: 100vh;
 }
 
 // SECTION PRODUCT END
